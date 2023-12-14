@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import './movie-details.styles.scss'
-import { useContext, useEffect, useState } from 'react';
-import { DataContext } from '../contexts/data.context';
+import { useEffect, useState } from 'react';
+
 
 const options = {
     method: 'GET',

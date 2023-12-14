@@ -50,10 +50,11 @@ export const DataProvider = ({children}) => {
         {title: 'Trending Movies', products: trendingMovies},
         {title: 'Trending TV Shows', products: trendingTv},
         {title: 'Top Rated TV Shows', products: topRatedTv},
+        {title: 'Latest Movies', products: latestMovies},
         {title: 'Top Rated Movies', products: topRatedMovies},
         
       ])
-    }, [trendingMovies, trendingTv, topRatedTv, topRatedMovies])
+    }, [latestMovies, trendingMovies, trendingTv, topRatedTv, topRatedMovies])
 
     useEffect(() => {
         const getData = async () => {

@@ -1,7 +1,6 @@
 import { useContext } from 'react';
 import './home.styles.scss';
 import { DataContext } from '../../contexts/data.context';
-import MovieCard from '../movie-card/movie-card.component';
 import CategoryContainer from '../category-container/category-container.component';
 
 
