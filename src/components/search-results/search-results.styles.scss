@@ -1,0 +1,15 @@
+.search-page {
+    .search-input {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: black;
+        font-size: 1.6rem;
+        color: #fff;
+        z-index: 200;
+        width: 100%;
+        border: none;
+        outline: none;
+        padding: 2rem;
+    }
+}

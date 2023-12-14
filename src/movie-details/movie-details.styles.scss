@@ -1,0 +1,37 @@
+.movie-details {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    iframe {
+        border: none;
+        width: 800px;
+        height: 350px;
+    }
+    .sources {
+        display: flex;
+
+        .source {
+            margin: 10px;
+            text-transform: uppercase;
+            background-color: #fff;
+            color: black;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+
+            &:hover, &.selected {
+                background-color: cornflowerblue;
+                color: #fff;
+            }
+
+            &.selected {
+                pointer-events: none;
+            }
+
+
+        }
+    }
+}

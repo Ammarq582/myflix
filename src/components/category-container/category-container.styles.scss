@@ -1,0 +1,43 @@
+.category-container {
+    margin-bottom: 4rem;
+
+    @media only screen and (max-width: 600px) {
+        margin-bottom: 2rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+        
+        letter-spacing: 1px;
+        color: #fff;
+        margin-bottom: 1rem;
+
+        @media only screen and (max-width: 600px) {
+            font-size: 1.8rem;
+        }
+    }
+    .products-container {
+        display: flex;
+        overflow: scroll;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        & > * {
+            min-width: 10%;
+
+            &:not(:first-child) {
+                margin-left: 2rem;                
+            }
+
+            @media only screen and (max-width: 600px) {
+                min-width: 30%;
+                &:not(:first-child) {
+                    margin-left: 1rem;                
+                }
+            }
+        }
+        
+        
+        
+    }
+}

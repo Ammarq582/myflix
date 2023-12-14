@@ -1,0 +1,28 @@
+.navigation-mobile {
+    width: 100%;
+    background-image: linear-gradient(to right, rgba(20,20,20,.9), rgba(0,0,0,.9));
+    color: #fff;
+    text-align: center;
+    padding: 1rem 2rem;
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+
+    .nav-link {
+        text-decoration: none;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        .nav-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        span {
+
+        }
+    }
+}
