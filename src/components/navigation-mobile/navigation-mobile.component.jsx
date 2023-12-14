@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import './navigation-mobile.styles.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFilm, faHome, faSearch, faTelevision, faTv } from '@fortawesome/free-solid-svg-icons';
+import { faFilm, faHome, faSearch, faTelevision, } from '@fortawesome/free-solid-svg-icons';
 
 const NavigationMobile = () => {
     return(
