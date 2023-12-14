@@ -58,53 +58,60 @@ export const DataProvider = ({children}) => {
 
     useEffect(() => {
         const getData = async () => {
-          const moviesArray = [];
-          const tvArray = [];
-          const latestMoviesArray = [];
-          const trendingMoviesArray = [];
-          const trendingTvArray = [];
-          const topRatedMoviesArray = [];
-          const topRatedTvArray = [];
+          // const moviesArray = [];
+          // const tvArray = [];
+          // const latestMoviesArray = [];
+          // const trendingMoviesArray = [];
+          // const trendingTvArray = [];
+          // const topRatedMoviesArray = [];
+          // const topRatedTvArray = [];
 
-          for (let page = 1; page < 3; page++) {
-            const movieResponse = await fetch(`https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=${page}&sort_by=popularity.desc`, options)
+          // for (let page = 1; page < 3; page++) {
+            const movieResponse = await fetch(`https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc`, options)
             const movieData = await movieResponse.json()
-            moviesArray.push(...movieData.results)
-
-            const tvResponse = await fetch(`https://api.themoviedb.org/3/discover/tv?include_adult=false&include_video=false&language=en-US&page=${page}&sort_by=popularity.desc`, options)
+            setMovies(movieData.results);
+            // moviesArray.push(...movieData.results)
+          
+            const tvResponse = await fetch(`https://api.themoviedb.org/3/discover/tv?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc`, options)
             const tvData = await tvResponse.json()
-            tvArray.push(...tvData.results)
+            setTv(tvData.results);
+            // tvArray.push(...tvData.results)
             
-            const latestMoviesResponse = await fetch(`https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=${page}`, options)
+            const latestMoviesResponse = await fetch(`https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1`, options)
             const latestMoviesData = await latestMoviesResponse.json()
-            latestMoviesArray.push(...latestMoviesData.results)
+            setLatestMovies(latestMoviesData.results);
+            // latestMoviesArray.push(...latestMoviesData.results)
 
-            const topRatedMoviesResponse = await fetch(`https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=${page}`, options)
+            const topRatedMoviesResponse = await fetch(`https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1`, options)
             const topRatedMoviesData = await topRatedMoviesResponse.json()
-            topRatedMoviesArray.push(...topRatedMoviesData.results)
+            setTopRatedMovies(topRatedMoviesData.results);
+            // topRatedMoviesArray.push(...topRatedMoviesData.results)
 
-            const topRatedTvResponse = await fetch(`https://api.themoviedb.org/3/tv/top_rated?language=en-US&page=${page}`, options)
+            const topRatedTvResponse = await fetch(`https://api.themoviedb.org/3/tv/top_rated?language=en-US&page=1`, options)
             const topRatedTvData = await topRatedTvResponse.json()
-            topRatedTvArray.push(...topRatedTvData.results)
+            setTopRatedTv(topRatedTvData.results);
+            // topRatedTvArray.push(...topRatedTvData.results)
 
             
-          }
+          // }
 
           const trendingMoviesResponse = await fetch(`https://api.themoviedb.org/3/trending/movie/day?language=en-US`, options)
           const trendingMoviesData = await trendingMoviesResponse.json()
-          trendingMoviesArray.push(...trendingMoviesData.results)
+          setTrendingMovies(trendingMoviesData.results);
+          // trendingMoviesArray.push(...trendingMoviesData.results)
 
           const trendingTvResponse = await fetch(`https://api.themoviedb.org/3/trending/tv/day?language=en-US`, options)
           const trendingTvData = await trendingTvResponse.json()
-          trendingTvArray.push(...trendingTvData.results)
+          setTrendingTv(trendingTvData.results);
+          // trendingTvArray.push(...trendingTvData.results)
 
-          setMovies(moviesArray);
-          setTv(tvArray);
-          setLatestMovies(latestMoviesArray);
-          setTrendingMovies(trendingMoviesArray);
-          setTrendingTv(trendingTvArray);
-          setTopRatedMovies(topRatedMoviesArray);
-          setTopRatedTv(topRatedTvArray);
+          // setMovies(moviesArray);
+          // setTv(tvArray);
+          // setLatestMovies(latestMoviesArray);
+          // setTrendingMovies(trendingMoviesArray);
+          // setTrendingTv(trendingTvArray);
+          // setTopRatedMovies(topRatedMoviesArray);
+          // setTopRatedTv(topRatedTvArray);
         
       }
       getData();
