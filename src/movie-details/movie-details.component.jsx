@@ -48,7 +48,7 @@ const MovieDetails = ({category}) => {
 
     return(
         <div className="movie-details">
-            <iframe src={currentSource} allowFullScreen='true'></iframe>
+            <iframe title='video' src={currentSource} allowFullScreen='true'></iframe>
             <div className="sources">
                 <div className='source' id='VidSrc' onClick={changeSource}>VidSrc</div>
                 <div className='source' id='embed2' onClick={changeSource}>embed2</div>
