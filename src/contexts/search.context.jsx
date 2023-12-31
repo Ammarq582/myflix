@@ -76,7 +76,7 @@ export const SearchProvider = ({children}) => {
       }
       setSearchData([]);
       debouncedSearch(search);
-      }, [search])
+      }, [search, debouncedSearch])
 
       const value = {isLoading, searchData, updateSearch}
 
