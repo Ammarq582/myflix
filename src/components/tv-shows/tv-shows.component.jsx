@@ -5,6 +5,8 @@ import MovieCard from '../movie-card/movie-card.component';
 
 const TvShows = () => {
     const {tv} = useContext(DataContext);
+    // const elem = document.querySelector('.tv-container');
+    // elem.addEventListener('scroll', e => console.log(e));
     return(
         <div className="tv-container">
             {

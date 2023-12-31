@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom"
 import TvShows from "../tv-shows/tv-shows.component"
-import MovieDetails from "../../movie-details/movie-details.component"
+import MovieDetails from '../movie-details/movie-details.component';
 
 const TvPage = () => {
     return(

@@ -1,6 +1,6 @@
 import { Route, Routes  } from 'react-router-dom';
 import './movie-page.styles.scss'
-import MovieDetails from '../../movie-details/movie-details.component';
+import MovieDetails from '../movie-details/movie-details.component';
 import Movies from '../movies/movies.component';
 
 const MoviePage = () => {
