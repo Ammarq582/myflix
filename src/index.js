@@ -6,16 +6,22 @@ import reportWebVitals from './reportWebVitals';
 import { DataProvider } from './contexts/data.context';
 import { BrowserRouter } from 'react-router-dom';
 import { SearchProvider } from './contexts/search.context';
+import { TvProvider } from './contexts/tv.context';
+import { MovieProvider } from './contexts/movie.context';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <DataProvider>
-        <SearchProvider>
-          <App />
-        </SearchProvider>
-      </DataProvider>
+      <MovieProvider>
+        <TvProvider>
+            <DataProvider>
+              <SearchProvider>
+                <App />
+              </SearchProvider>
+            </DataProvider>
+          </TvProvider>      
+      </MovieProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

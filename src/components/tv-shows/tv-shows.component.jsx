@@ -1,14 +1,28 @@
-import { useContext } from 'react';
+import { useCallback, useContext, useMemo } from 'react';
 import './tv-shows.styles.scss';
-import { DataContext } from '../../contexts/data.context';
 import MovieCard from '../movie-card/movie-card.component';
+import { tvContext } from '../../contexts/tv.context';
+import { debounce } from '../../utils/tmdb.utils';
+
+
 
 const TvShows = () => {
-    const {tv} = useContext(DataContext);
-    // const elem = document.querySelector('.tv-container');
-    // elem.addEventListener('scroll', e => console.log(e));
+    const {tv, updatePageNum} = useContext(tvContext);
+    
+    const handlerScroll = useCallback((e) => {
+        const isBottomReached = (e.target.scrollTop + e.target.clientHeight + 100) > e.target.scrollHeight;
+        if(isBottomReached) {
+            console.log('bottom');
+            updatePageNum();
+        }
+    }, [updatePageNum])
+
+    const debouncedScroll = useMemo(() => {
+        return debounce(handlerScroll, 500)
+    }, [handlerScroll])
+
     return(
-        <div className="tv-container">
+        <div className="tv-container" onScroll={(e) => debouncedScroll(e)}>
             {
                 tv.map(tv => <MovieCard movie={tv}/>)
             }

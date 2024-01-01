@@ -8,7 +8,7 @@ import { SearchContext } from '../../contexts/search.context';
 
 
 const SearchPage = () => {
-    const {isLoading, updateSearch, searchData} = useContext(SearchContext);
+    const {searchData, isLoading, updateSearch} = useContext(SearchContext);
     const [searchValue, setSearchValue] = useState('');
 
     const updateSearchValue = (e) => {

@@ -7,7 +7,6 @@ const MovieCard = ({movie}) => {
     const {poster_path,  title, name, id} = movie;
     const imageUrl = `https://image.tmdb.org/t/p/w300/${poster_path}`;
     
-    console.log(poster_path);
     const navigateToMovie = () => {
         if(title) {
             navigate(`/movie/${id.toString()}`)

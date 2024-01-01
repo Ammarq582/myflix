@@ -31,7 +31,7 @@ const MovieDetails = ({category}) => {
         .then(response => console.log(response))
         .catch(err => console.error(err));
     
-        console.log(response);
+        
     }
     if(category === 'tv') {
         getCurrentShowDetails();

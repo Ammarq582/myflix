@@ -7,6 +7,7 @@ import Spinner from '../spinner/spinner.component';
 
 const Home = () => {
     const {homeData, isLoading} = useContext(DataContext);
+
     return(
         <div className="home">
             {
