@@ -48,6 +48,11 @@ const MovieDetails = ({category}) => {
     //     frame.sandbox = "allow-forms allow-pointer-lock allow-presentation allow-same-origin allow-scripts allow-top-navigation";
     // }
 
+    // const checkLinks = (e) => {
+    //     const elem = e.target.innerText;
+    //     alert(toString(elem))
+    // }   
+
     return(
         <div className="movie-details">
             <iframe title='video' src={currentSource} referrerpolicy="origin" allowFullScreen='true'></iframe>
