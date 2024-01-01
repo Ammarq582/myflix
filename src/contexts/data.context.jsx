@@ -51,6 +51,7 @@ export const DataProvider = ({children}) => {
 
     useEffect(() => {
         const getData = async () => {
+          console.log('aaa');
             const movieResponse = await fetch(`https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc`, options)
             const movieData = await movieResponse.json()
             setMovies([...movies, ...movieData.results]);
@@ -84,6 +85,7 @@ export const DataProvider = ({children}) => {
           
       }
       getData();
+      // eslint-disable-next-line
       }, [])
     
 

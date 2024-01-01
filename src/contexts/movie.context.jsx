@@ -23,9 +23,10 @@ export const MovieProvider = ({children}) => {
         const getMovieData = async () => {
             const movieResponse = await fetch(`https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=${pageNum}&sort_by=popularity.desc`, options)
             const movieData = await movieResponse.json()
-            setMovie([...movie, ...movieData.results]);
+            setMovie([...movie, ...movieData.results])            
         }
         getMovieData();
+        // eslint-disable-next-line
     }, [pageNum])
 
     const value = {movie, pageNum, updatePageNum}

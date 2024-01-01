@@ -27,6 +27,7 @@ export const TvProvider = ({children}) => {
             setTv([...tv, ...tvData.results]);
         }
         getTvData();
+        // eslint-disable-next-line
     }, [pageNum])
 
     const value = {tv, pageNum, updatePageNum}
