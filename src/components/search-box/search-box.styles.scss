@@ -34,7 +34,7 @@
         .links-container {
             display: flex;
 
-            @media only screen and (max-width: 600px) {
+            @media only screen and (max-width: 640px) {
             display: none;
         }
             .link {
@@ -60,6 +60,9 @@
     }
 
     .navigation-right {
+        @media screen and (max-width: 640px) {
+            display: none;
+        }
         .search-box {
             .search-icon {
                 color: #fff;

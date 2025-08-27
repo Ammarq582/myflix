@@ -18,22 +18,24 @@
     }
     .products-container {
         display: flex;
+        gap: 12px;
         overflow: scroll;
         &::-webkit-scrollbar {
             display: none;
         }
         & > * {
-            min-width: 10%;
+            // min-width: 10%;
 
-            &:not(:first-child) {
-                margin-left: 2rem;                
-            }
+            // &:not(:first-child) {
+            //     margin-left: 2rem;                
+            // }
 
             @media only screen and (max-width: 600px) {
-                min-width: 30%;
-                &:not(:first-child) {
-                    margin-left: 1rem;                
-                }
+                gap: 32px;
+                // min-width: 30%;
+                // &:not(:first-child) {
+                //     margin-left: 1rem;                
+                // }
             }
         }
         

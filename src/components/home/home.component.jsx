@@ -15,7 +15,7 @@ const Home = () => {
                 ?
                 <Spinner/>
                 :
-                homeData.map(data => <CategoryContainer title={data.title} products={data.products}/>)
+                homeData.map(data => <CategoryContainer key={data.title} title={data.title} products={data.products}/>)
             }
             
         </div>

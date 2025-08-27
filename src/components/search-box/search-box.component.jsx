@@ -48,9 +48,9 @@ const SearchBox = () => {
                         <Link to='' id="home" className='link' onClick={setTvOrMovie}>Home</Link>
                         <Link to='tv' id="tv" className='link' onClick={setTvOrMovie}>TV Shows</Link>
                         <Link to='movie' id="movie" className='link' onClick={setTvOrMovie}>Movies</Link>
-                        <Link to='new' id="movie" className='link' onClick={setTvOrMovie}>New & Popular</Link>
+                        {/* <Link to='new' id="movie" className='link' onClick={setTvOrMovie}>New & Popular</Link>
                         <Link to='mylist' id="movie" className='link' onClick={setTvOrMovie}>My List</Link>
-                        <Link to='lang' id="movie" className='link' onClick={setTvOrMovie}>Browse by Languages</Link>
+                        <Link to='lang' id="movie" className='link' onClick={setTvOrMovie}>Browse by Languages</Link> */}
                     </div>
                 </div>
 

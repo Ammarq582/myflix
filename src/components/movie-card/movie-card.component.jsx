@@ -5,7 +5,9 @@ import { Fragment } from 'react';
 const MovieCard = ({movie}) => {
     const navigate = useNavigate();
     const {poster_path,  title, name, id} = movie;
+    
     const imageUrl = `https://image.tmdb.org/t/p/w300/${poster_path}`;
+    const thumbnailImageUrl = `https://image.tmdb.org/t/p/w300/${poster_path}`;
     
     const navigateToMovie = () => {
         if(title) {
@@ -24,7 +26,7 @@ const MovieCard = ({movie}) => {
                 ?
                 <div className="movie-card" onClick={navigateToMovie}>
                     <div className="image-container">
-                        <img src={imageUrl} alt={title} />
+                        <img src={imageUrl} alt={title} width={300} height={400}/>
                     </div>
                 </div>
                 :

@@ -43,15 +43,15 @@ const MovieDetails = ({category}) => {
         setCurrentSource(sources[e.target.id]);
     }
 
-    // if (currentSource === sources.embed2) {
-    //     const frame = document.querySelector('iframe');
-    //     frame.sandbox = "allow-forms allow-pointer-lock allow-presentation allow-same-origin allow-scripts allow-top-navigation";
-    // }
+    if (currentSource === sources.embed2) {
+        const frame = document.querySelector('iframe');
+        frame.sandbox = "allow-forms allow-pointer-lock allow-presentation allow-same-origin allow-scripts allow-top-navigation";
+    }
 
-    // const checkLinks = (e) => {
-    //     const elem = e.target.innerText;
-    //     alert(toString(elem))
-    // }   
+    const checkLinks = (e) => {
+        const elem = e.target.innerText;
+        alert(toString(elem))
+    }   
 
     return(
         <div className="movie-details">
@@ -62,7 +62,7 @@ const MovieDetails = ({category}) => {
                 <div className='source' id='moviesApi' onClick={changeSource}>Movies Api</div>
                 <div className='source' id='superEmbed' onClick={changeSource}>Super Embed</div>
                 <div className='source' id='blackVid' onClick={changeSource}>Black Vid</div>
-                <div className='source' id='check' onClick={changeSource}>Check</div>
+                {/* <div className='source' id='check' onClick={changeSource}>Check</div> */}
             </div>
         </div>
     )

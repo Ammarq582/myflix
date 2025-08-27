@@ -8,11 +8,11 @@
     z-index: 100;
     bottom: 0;
     left: 0;
-    display: flex;
+    display: none;
     justify-content: space-between;
 
-    @media only screen and (min-width: 600px) {
-        display: none;
+    @media only screen and (max-width: 640px) {
+        display: flex;
     }
 
     .nav-link {
