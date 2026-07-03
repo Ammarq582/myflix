@@ -46,7 +46,8 @@ const MovieDetails = ({category}) => {
     if (currentSource === sources.embed2) {
         const frame = document.querySelector('iframe');
         frame.sandbox = "allow-forms allow-pointer-lock allow-presentation allow-same-origin allow-scripts allow-top-navigation";
-    }
+   
+ }
 
     const checkLinks = (e) => {
         const elem = e.target.innerText;
