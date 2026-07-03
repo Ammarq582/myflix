@@ -10,7 +10,7 @@ const MovieDetails = ({category}) => {
         superEmbed: category === 'tv' ? `https://multiembed.mov/?video_id=${id}&tmdb=1&s=1&e=1` : `https://multiembed.mov/?video_id=${id}&tmdb=1`,
         blackVid: category === 'tv' ? `https://blackvid.space/embed?tmdb=${id}&season=1&episode=1` : `https://blackvid.space/embed?tmdb=${id}`,
         embed2: category === 'tv' ? `https://www.2embed.cc/embedtv/${id}&s=1&e=1` : `https://www.2embed.cc/embed/${id}`,
-        VidSrc: `https://vidsrc.xyz/embed/${category}?tmdb=${id}&color=2986cc`,
+        VidSrc: `https://vidsrcme.ru/embed/${category}?tmdb=${id}&color=2986cc`,
         moviesApi: `https://moviesapi.club/${category}/${id}`,
         
     }
